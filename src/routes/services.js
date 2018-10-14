@@ -11,7 +11,8 @@ router.post('/transfer', (req, res) => {
     
     writeJSON();
 
-    res.render('transfer', { message: 'Transfer Completed' });
+    // res.render('transfer', { message: 'Transfer Completed' });
+    res.redirect('/');
 });
 
 router.get('/payment', (req, res) => res.render('payment', { account: accounts.credit }));
@@ -21,7 +22,8 @@ router.post('/payment', (req, res) => {
 
     writeJSON();
 
-    res.render('payment', { message: 'Payment Successful', account: accounts.credit });
+    // res.render('payment', { message: 'Payment Successful', account: accounts.credit });
+    res.redirect('/');
 });
 
 module.exports = router;

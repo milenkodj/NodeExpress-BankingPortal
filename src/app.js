@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
@@ -8,7 +7,7 @@ const servicesRoutes = require('./routes/services');
 
 const app = express();
 
-const { accounts, users, writeJSON } = require('./data');
+const { accounts, users } = require('./data');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
